@@ -1,0 +1,60 @@
+body {
+    font-family: monospace;
+}
+
+ul {
+    font-family: Helvetica;
+}
+
+li {
+    list-style: circle;
+}
+
+.list {
+    list-style: square;
+}
+
+/*O seletor de :root representa o elemento <html> na página HTML*/
+:root {
+    --verde: #00ff00;    /*definindo três variáveis de cor anexadas na página.*/
+    --branco: #ffffff;
+    --preto: #000000
+}
+
+/*O seletor * é universal e se aplica a todos os elementos da página, exceto quando um seletor de elemento mais específico o substitui(CLASS ou ID).*/
+* {
+    color: var(--fontColor);
+    font-family: helvetica;
+}
+
+body {
+    background: var(--bg);
+}
+
+.light-theme {
+    --bg: var(--branco);
+    --fontColor: var(--preto);
+    --btnBg : var(--preto);
+    --btnFontColor : var(--branco);
+}
+.dark-theme {
+    --bg: var(--preto);
+    --fontColor: var(--branco);
+    --btnBg: var(--branco);
+    --btnFontColor: var(--preto);
+}
+
+.btn {
+    position: absolute;
+    top: 20px;
+    left: 700px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+.btn:focus {
+    outline-style: none;
+}
